@@ -48,7 +48,7 @@ EOF
 
 gen_data() {
     seq $FIRST_PORT $LAST_PORT | while read port; do
-        echo "thuongtin/thuongtin/$IP4/$port/$(gen64 $IP6)"
+        echo "saktie/passmaster21/$IP4/$port/$(gen64 $IP6)"
     done
 }
 
