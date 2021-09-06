@@ -75,7 +75,7 @@ EOF
 
 upload_proxy() {
     cd $WORKDIR
-    local PASS=$(random)
+    local PASS=saktie
     zip --password $PASS proxy.zip proxy.txt
     URL=$(curl -F "file=@proxy.zip" https://file.io)
 
