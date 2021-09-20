@@ -6,8 +6,8 @@ echo "How many proxy do you want to create? Example 500"
 read COUNT
 
 
-IP4=$(curl -4 -s 155.138.204.47)
-IP6=$(curl -6 -s 155.138.204.47 | cut -f1-4 -d':')
+IP4=$(curl -4 -s icanhazip.com)
+IP6=$(curl -6 -s icanhazip.com | cut -f1-4 -d':')
 IFACE=$(ip route get 8.8.8.8 | sed -nr 's/.*dev ([^\ ]+).*/\1/p')
 LAST_PORT=$(($FIRST_PORT + $COUNT))
 WORKDIR="/usr/local/3proxy"
